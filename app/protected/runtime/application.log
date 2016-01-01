@@ -1,0 +1,493 @@
+2015/12/31 10:34:43 [error] [exception.CException] exception 'CException' with message 'Property "CDbConnection.tablePreFix" is not defined.' in F:\PHPDev\www\Bbs\framework\base\CComponent.php:173
+Stack trace:
+#0 F:\PHPDev\www\Bbs\framework\YiiBase.php(215): CComponent->__set('tablePreFix', '')
+#1 F:\PHPDev\www\Bbs\framework\base\CModule.php(371): YiiBase::createComponent(Array)
+#2 F:\PHPDev\www\Bbs\framework\base\CApplication.php(426): CModule->getComponent('db')
+#3 F:\PHPDev\www\Bbs\framework\db\ar\CActiveRecord.php(607): CApplication->getDb()
+#4 F:\PHPDev\www\Bbs\framework\db\ar\CActiveRecord.php(2236): CActiveRecord->getDbConnection()
+#5 F:\PHPDev\www\Bbs\framework\db\ar\CActiveRecord.php(371): CActiveRecordMetaData->__construct(Object(Notices))
+#6 F:\PHPDev\www\Bbs\framework\db\ar\CActiveRecord.php(386): CActiveRecord::model('Notices')
+#7 F:\PHPDev\www\Bbs\framework\db\ar\CActiveRecord.php(62): CActiveRecord->getMetaData()
+#8 F:\PHPDev\www\Bbs\app\protected\models\Notices.php(11): CActiveRecord->__construct()
+#9 F:\PHPDev\www\Bbs\app\protected\controllers\IndexController.php(10): Notices::model()
+#10 F:\PHPDev\www\Bbs\framework\web\actions\CInlineAction.php(50): IndexController->actionIndex()
+#11 F:\PHPDev\www\Bbs\framework\web\CController.php(300): CInlineAction->runWithParams(Array)
+#12 F:\PHPDev\www\Bbs\framework\web\CController.php(278): CController->runAction(Object(CInlineAction))
+#13 F:\PHPDev\www\Bbs\framework\web\CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 F:\PHPDev\www\Bbs\framework\web\CWebApplication.php(328): CController->run('index')
+#15 F:\PHPDev\www\Bbs\framework\web\CWebApplication.php(121): CWebApplication->runController('')
+#16 F:\PHPDev\www\Bbs\framework\base\CApplication.php(155): CWebApplication->processRequest()
+#17 F:\PHPDev\www\Bbs\app\index.php(13): CApplication->run()
+#18 {main} REQUEST_URI=/Bbs/app/index.php
+2015/12/31 10:49:26 [error] [exception.CException] exception 'CException' with message 'LoginController cannot find the requested view "index".' in F:\PHPDev\www\Bbs\framework\web\CController.php:875
+Stack trace:
+#0 F:\PHPDev\www\Bbs\framework\web\CController.php(779): CController->renderPartial('index', NULL, true)
+#1 F:\PHPDev\www\Bbs\app\protected\controllers\LoginController.php(9): CController->render('index')
+#2 F:\PHPDev\www\Bbs\framework\web\actions\CInlineAction.php(50): LoginController->actionIndex()
+#3 F:\PHPDev\www\Bbs\framework\web\CController.php(300): CInlineAction->runWithParams(Array)
+#4 F:\PHPDev\www\Bbs\framework\web\CController.php(278): CController->runAction(Object(CInlineAction))
+#5 F:\PHPDev\www\Bbs\framework\web\CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 F:\PHPDev\www\Bbs\framework\web\CWebApplication.php(328): CController->run('index')
+#7 F:\PHPDev\www\Bbs\framework\web\CWebApplication.php(121): CWebApplication->runController('login/index')
+#8 F:\PHPDev\www\Bbs\framework\base\CApplication.php(155): CWebApplication->processRequest()
+#9 F:\PHPDev\www\Bbs\app\index.php(13): CApplication->run()
+#10 {main} REQUEST_URI=/Bbs/app/index.php?r=login/index
+2015/12/31 10:54:20 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[HY000]: General error: 1364 Field 'userName' doesn't have a default value. The SQL statement executed was: INSERT INTO `userinfo` (`headPic`) VALUES (:yp0).
+in F:\PHPDev\www\Bbs\app\protected\controllers\RegController.php (14)
+in F:\PHPDev\www\Bbs\app\index.php (13)
+2015/12/31 10:54:20 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[HY000]: General error: 1364 Field 'userName' doesn't have a default value. The SQL statement executed was: INSERT INTO `userinfo` (`headPic`) VALUES (:yp0)' in F:\PHPDev\www\Bbs\framework\db\CDbCommand.php:338
+Stack trace:
+#0 F:\PHPDev\www\Bbs\framework\db\ar\CActiveRecord.php(1015): CDbCommand->execute()
+#1 F:\PHPDev\www\Bbs\framework\db\ar\CActiveRecord.php(779): CActiveRecord->insert(NULL)
+#2 F:\PHPDev\www\Bbs\app\protected\controllers\RegController.php(14): CActiveRecord->save(Array)
+#3 F:\PHPDev\www\Bbs\framework\web\actions\CInlineAction.php(50): RegController->actionReg()
+#4 F:\PHPDev\www\Bbs\framework\web\CController.php(300): CInlineAction->runWithParams(Array)
+#5 F:\PHPDev\www\Bbs\framework\web\CController.php(278): CController->runAction(Object(CInlineAction))
+#6 F:\PHPDev\www\Bbs\framework\web\CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 F:\PHPDev\www\Bbs\framework\web\CWebApplication.php(328): CController->run('reg')
+#8 F:\PHPDev\www\Bbs\framework\web\CWebApplication.php(121): CWebApplication->runController('reg/reg')
+#9 F:\PHPDev\www\Bbs\framework\base\CApplication.php(155): CWebApplication->processRequest()
+#10 F:\PHPDev\www\Bbs\app\index.php(13): CApplication->run()
+#11 {main} REQUEST_URI=/Bbs/app/index.php?r=reg/reg
+2015/12/31 11:17:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "login".' in F:\PHPDev\www\Bbs\framework\web\CController.php:477
+Stack trace:
+#0 F:\PHPDev\www\Bbs\framework\web\CController.php(262): CController->missingAction('login')
+#1 F:\PHPDev\www\Bbs\framework\web\CWebApplication.php(328): CController->run('login')
+#2 F:\PHPDev\www\Bbs\framework\web\CWebApplication.php(121): CWebApplication->runController('login/login')
+#3 F:\PHPDev\www\Bbs\framework\base\CApplication.php(155): CWebApplication->processRequest()
+#4 F:\PHPDev\www\Bbs\app\index.php(13): CApplication->run()
+#5 {main} REQUEST_URI=/Bbs/app/index.php?r=login/login
+2015/12/31 11:22:02 [error] [system.db.CDbCommand] CDbCommand::fetch() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'admin'' at line 1. The SQL statement executed was: SELECT * FROM userinfo where userName='admin AND password='admin'.
+in F:\PHPDev\www\Bbs\app\protected\controllers\LoginController.php (15)
+in F:\PHPDev\www\Bbs\app\index.php (13)
+2015/12/31 11:22:02 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'admin'' at line 1. The SQL statement executed was: SELECT * FROM userinfo where userName='admin AND password='admin'' in F:\PHPDev\www\Bbs\framework\db\CDbCommand.php:518
+Stack trace:
+#0 F:\PHPDev\www\Bbs\framework\db\CDbCommand.php(395): CDbCommand->queryInternal('fetch', Array, Array)
+#1 F:\PHPDev\www\Bbs\framework\db\ar\CActiveRecord.php(1468): CDbCommand->queryRow()
+#2 F:\PHPDev\www\Bbs\app\protected\controllers\LoginController.php(15): CActiveRecord->findBySql('SELECT * FROM u...')
+#3 F:\PHPDev\www\Bbs\framework\web\actions\CInlineAction.php(50): LoginController->actionLogin()
+#4 F:\PHPDev\www\Bbs\framework\web\CController.php(300): CInlineAction->runWithParams(Array)
+#5 F:\PHPDev\www\Bbs\framework\web\CController.php(278): CController->runAction(Object(CInlineAction))
+#6 F:\PHPDev\www\Bbs\framework\web\CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 F:\PHPDev\www\Bbs\framework\web\CWebApplication.php(328): CController->run('login')
+#8 F:\PHPDev\www\Bbs\framework\web\CWebApplication.php(121): CWebApplication->runController('login/login')
+#9 F:\PHPDev\www\Bbs\framework\base\CApplication.php(155): CWebApplication->processRequest()
+#10 F:\PHPDev\www\Bbs\app\index.php(13): CApplication->run()
+#11 {main} REQUEST_URI=/Bbs/app/index.php?r=login/login
+2015/12/31 11:23:03 [error] [php] Object of class UserInfo could not be converted to string (F:\PHPDev\www\Bbs\app\protected\controllers\LoginController.php:16)
+Stack trace:
+#0 F:\PHPDev\www\Bbs\framework\web\CController.php(278): LoginController->runAction()
+#1 F:\PHPDev\www\Bbs\framework\web\CController.php(257): LoginController->runActionWithFilters()
+#2 F:\PHPDev\www\Bbs\framework\web\CWebApplication.php(328): LoginController->run()
+#3 F:\PHPDev\www\Bbs\framework\web\CWebApplication.php(121): CWebApplication->runController()
+#4 F:\PHPDev\www\Bbs\framework\base\CApplication.php(155): CWebApplication->processRequest()
+#5 F:\PHPDev\www\Bbs\app\index.php(13): CWebApplication->run()
+REQUEST_URI=/Bbs/app/index.php?r=login/login
+in F:\PHPDev\www\Bbs\app\protected\controllers\LoginController.php (16)
+in F:\PHPDev\www\Bbs\app\index.php (13)
+2015/12/31 11:28:30 [error] [php] Object of class UserInfo could not be converted to string (F:\PHPDev\www\Bbs\app\protected\controllers\LoginController.php:16)
+Stack trace:
+#0 F:\PHPDev\www\Bbs\framework\web\CController.php(278): LoginController->runAction()
+#1 F:\PHPDev\www\Bbs\framework\web\CController.php(257): LoginController->runActionWithFilters()
+#2 F:\PHPDev\www\Bbs\framework\web\CWebApplication.php(328): LoginController->run()
+#3 F:\PHPDev\www\Bbs\framework\web\CWebApplication.php(121): CWebApplication->runController()
+#4 F:\PHPDev\www\Bbs\framework\base\CApplication.php(155): CWebApplication->processRequest()
+#5 F:\PHPDev\www\Bbs\app\index.php(13): CWebApplication->run()
+REQUEST_URI=/Bbs/app/index.php?r=login/login
+in F:\PHPDev\www\Bbs\app\protected\controllers\LoginController.php (16)
+in F:\PHPDev\www\Bbs\app\index.php (13)
+2015/12/31 11:44:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "search/index".' in F:\PHPDev\www\Bbs\framework\web\CWebApplication.php:332
+Stack trace:
+#0 F:\PHPDev\www\Bbs\framework\web\CWebApplication.php(121): CWebApplication->runController('search/index')
+#1 F:\PHPDev\www\Bbs\framework\base\CApplication.php(155): CWebApplication->processRequest()
+#2 F:\PHPDev\www\Bbs\app\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/Bbs/app/index.php?r=search/index
+2015/12/31 11:48:00 [error] [php] Object of class UserInfo could not be converted to string (F:\PHPDev\www\Bbs\app\protected\controllers\LoginController.php:16)
+Stack trace:
+#0 F:\PHPDev\www\Bbs\framework\web\CController.php(278): LoginController->runAction()
+#1 F:\PHPDev\www\Bbs\framework\web\CController.php(257): LoginController->runActionWithFilters()
+#2 F:\PHPDev\www\Bbs\framework\web\CWebApplication.php(328): LoginController->run()
+#3 F:\PHPDev\www\Bbs\framework\web\CWebApplication.php(121): CWebApplication->runController()
+#4 F:\PHPDev\www\Bbs\framework\base\CApplication.php(155): CWebApplication->processRequest()
+#5 F:\PHPDev\www\Bbs\app\index.php(13): CWebApplication->run()
+REQUEST_URI=/Bbs/app/index.php?r=login/login
+in F:\PHPDev\www\Bbs\app\protected\controllers\LoginController.php (16)
+in F:\PHPDev\www\Bbs\app\index.php (13)
+2015/12/31 11:56:54 [error] [system.db.CDbCommand] CDbCommand::fetch() failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'admin' in 'where clause'. The SQL statement executed was: SELECT * FROM `userinfo` `t` WHERE userName=admin AND password=admin LIMIT 1.
+in F:\PHPDev\www\Bbs\app\protected\controllers\LoginController.php (15)
+in F:\PHPDev\www\Bbs\app\index.php (13)
+2015/12/31 11:56:54 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'admin' in 'where clause'. The SQL statement executed was: SELECT * FROM `userinfo` `t` WHERE userName=admin AND password=admin LIMIT 1' in F:\PHPDev\www\Bbs\framework\db\CDbCommand.php:518
+Stack trace:
+#0 F:\PHPDev\www\Bbs\framework\db\CDbCommand.php(395): CDbCommand->queryInternal('fetch', Array, Array)
+#1 F:\PHPDev\www\Bbs\framework\db\ar\CActiveRecord.php(1256): CDbCommand->queryRow()
+#2 F:\PHPDev\www\Bbs\framework\db\ar\CActiveRecord.php(1366): CActiveRecord->query(Object(CDbCriteria))
+#3 F:\PHPDev\www\Bbs\app\protected\controllers\LoginController.php(15): CActiveRecord->find('userName=admin ...')
+#4 F:\PHPDev\www\Bbs\framework\web\actions\CInlineAction.php(50): LoginController->actionLogin()
+#5 F:\PHPDev\www\Bbs\framework\web\CController.php(300): CInlineAction->runWithParams(Array)
+#6 F:\PHPDev\www\Bbs\framework\web\CController.php(278): CController->runAction(Object(CInlineAction))
+#7 F:\PHPDev\www\Bbs\framework\web\CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 F:\PHPDev\www\Bbs\framework\web\CWebApplication.php(328): CController->run('login')
+#9 F:\PHPDev\www\Bbs\framework\web\CWebApplication.php(121): CWebApplication->runController('login/login')
+#10 F:\PHPDev\www\Bbs\framework\base\CApplication.php(155): CWebApplication->processRequest()
+#11 F:\PHPDev\www\Bbs\app\index.php(13): CApplication->run()
+#12 {main} REQUEST_URI=/Bbs/app/index.php?r=login/login
+2015/12/31 12:19:53 [error] [php] session_destroy(): Trying to destroy uninitialized session (F:\PHPDev\www\Bbs\app\protected\controllers\LoginController.php:30)
+Stack trace:
+#0 F:\PHPDev\www\Bbs\framework\web\CController.php(300): CInlineAction->runWithParams()
+#1 F:\PHPDev\www\Bbs\framework\web\CController.php(278): LoginController->runAction()
+#2 F:\PHPDev\www\Bbs\framework\web\CController.php(257): LoginController->runActionWithFilters()
+#3 F:\PHPDev\www\Bbs\framework\web\CWebApplication.php(328): LoginController->run()
+#4 F:\PHPDev\www\Bbs\framework\web\CWebApplication.php(121): CWebApplication->runController()
+#5 F:\PHPDev\www\Bbs\framework\base\CApplication.php(155): CWebApplication->processRequest()
+#6 F:\PHPDev\www\Bbs\app\index.php(13): CWebApplication->run()
+REQUEST_URI=/Bbs/app/index.php?r=login/loginout
+in F:\PHPDev\www\Bbs\app\protected\controllers\LoginController.php (30)
+in F:\PHPDev\www\Bbs\app\index.php (13)
+2015/12/31 12:20:12 [error] [php] session_destroy() expects exactly 0 parameters, 1 given (F:\PHPDev\www\Bbs\app\protected\controllers\LoginController.php:30)
+Stack trace:
+#0 F:\PHPDev\www\Bbs\framework\web\CController.php(300): CInlineAction->runWithParams()
+#1 F:\PHPDev\www\Bbs\framework\web\CController.php(278): LoginController->runAction()
+#2 F:\PHPDev\www\Bbs\framework\web\CController.php(257): LoginController->runActionWithFilters()
+#3 F:\PHPDev\www\Bbs\framework\web\CWebApplication.php(328): LoginController->run()
+#4 F:\PHPDev\www\Bbs\framework\web\CWebApplication.php(121): CWebApplication->runController()
+#5 F:\PHPDev\www\Bbs\framework\base\CApplication.php(155): CWebApplication->processRequest()
+#6 F:\PHPDev\www\Bbs\app\index.php(13): CWebApplication->run()
+REQUEST_URI=/Bbs/app/index.php?r=login/loginout
+in F:\PHPDev\www\Bbs\app\protected\controllers\LoginController.php (30)
+in F:\PHPDev\www\Bbs\app\index.php (13)
+2015/12/31 12:39:20 [error] [php] Cannot modify header information - headers already sent by (output started at F:\PHPDev\www\Bbs\app\protected\controllers\LoginController.php:23) (F:\PHPDev\www\Bbs\framework\web\CHttpRequest.php:657)
+Stack trace:
+#0 F:\PHPDev\www\Bbs\app\protected\controllers\LoginController.php(25): LoginController->redirect()
+#1 F:\PHPDev\www\Bbs\framework\web\actions\CInlineAction.php(50): LoginController->actionLogin()
+#2 F:\PHPDev\www\Bbs\framework\web\CController.php(300): CInlineAction->runWithParams()
+#3 F:\PHPDev\www\Bbs\framework\web\CController.php(278): LoginController->runAction()
+#4 F:\PHPDev\www\Bbs\framework\web\CController.php(257): LoginController->runActionWithFilters()
+#5 F:\PHPDev\www\Bbs\framework\web\CWebApplication.php(328): LoginController->run()
+#6 F:\PHPDev\www\Bbs\framework\web\CWebApplication.php(121): CWebApplication->runController()
+#7 F:\PHPDev\www\Bbs\framework\base\CApplication.php(155): CWebApplication->processRequest()
+#8 F:\PHPDev\www\Bbs\app\index.php(13): CWebApplication->run()
+REQUEST_URI=/Bbs/app/index.php?r=login/login
+in F:\PHPDev\www\Bbs\app\protected\controllers\LoginController.php (25)
+in F:\PHPDev\www\Bbs\app\index.php (13)
+2015/12/31 13:18:13 [error] [php] Cannot modify header information - headers already sent by (output started at F:\PHPDev\www\Bbs\app\protected\controllers\LoginController.php:19) (F:\PHPDev\www\Bbs\framework\web\CHttpRequest.php:657)
+Stack trace:
+#0 F:\PHPDev\www\Bbs\app\protected\controllers\LoginController.php(26): LoginController->redirect()
+#1 F:\PHPDev\www\Bbs\framework\web\actions\CInlineAction.php(50): LoginController->actionLogin()
+#2 F:\PHPDev\www\Bbs\framework\web\CController.php(300): CInlineAction->runWithParams()
+#3 F:\PHPDev\www\Bbs\framework\web\CController.php(278): LoginController->runAction()
+#4 F:\PHPDev\www\Bbs\framework\web\CController.php(257): LoginController->runActionWithFilters()
+#5 F:\PHPDev\www\Bbs\framework\web\CWebApplication.php(328): LoginController->run()
+#6 F:\PHPDev\www\Bbs\framework\web\CWebApplication.php(121): CWebApplication->runController()
+#7 F:\PHPDev\www\Bbs\framework\base\CApplication.php(155): CWebApplication->processRequest()
+#8 F:\PHPDev\www\Bbs\app\index.php(13): CWebApplication->run()
+REQUEST_URI=/Bbs/app/index.php?r=login/login
+in F:\PHPDev\www\Bbs\app\protected\controllers\LoginController.php (26)
+in F:\PHPDev\www\Bbs\app\index.php (13)
+2015/12/31 13:24:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "help/index".' in F:\PHPDev\www\Bbs\framework\web\CWebApplication.php:332
+Stack trace:
+#0 F:\PHPDev\www\Bbs\framework\web\CWebApplication.php(121): CWebApplication->runController('help/index')
+#1 F:\PHPDev\www\Bbs\framework\base\CApplication.php(155): CWebApplication->processRequest()
+#2 F:\PHPDev\www\Bbs\app\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/Bbs/app/index.php?r=help/index
+2015/12/31 13:53:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "post/index".' in F:\PHPDev\www\Bbs\framework\web\CWebApplication.php:332
+Stack trace:
+#0 F:\PHPDev\www\Bbs\framework\web\CWebApplication.php(121): CWebApplication->runController('post/index')
+#1 F:\PHPDev\www\Bbs\framework\base\CApplication.php(155): CWebApplication->processRequest()
+#2 F:\PHPDev\www\Bbs\app\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/Bbs/app/index.php?r=post/index
+2015/12/31 14:14:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "user/index".' in F:\PHPDev\www\Bbs\framework\web\CWebApplication.php:332
+Stack trace:
+#0 F:\PHPDev\www\Bbs\framework\web\CWebApplication.php(121): CWebApplication->runController('user/index')
+#1 F:\PHPDev\www\Bbs\framework\base\CApplication.php(155): CWebApplication->processRequest()
+#2 F:\PHPDev\www\Bbs\app\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/Bbs/app/index.php?r=user/index
+2015/12/31 14:14:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "user/index".' in F:\PHPDev\www\Bbs\framework\web\CWebApplication.php:332
+Stack trace:
+#0 F:\PHPDev\www\Bbs\framework\web\CWebApplication.php(121): CWebApplication->runController('user/index')
+#1 F:\PHPDev\www\Bbs\framework\base\CApplication.php(155): CWebApplication->processRequest()
+#2 F:\PHPDev\www\Bbs\app\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/Bbs/app/index.php?r=user/index
+2015/12/31 14:32:53 [error] [php] session_start(): Cannot send session cache limiter - headers already sent (output started at F:\PHPDev\www\Bbs\app\protected\controllers\UserController.php:16) (F:\PHPDev\www\Bbs\app\protected\views\layouts\bbs.php:1)
+Stack trace:
+#0 F:\PHPDev\www\Bbs\framework\web\CBaseController.php(88): UserController->renderInternal()
+#1 F:\PHPDev\www\Bbs\framework\web\CController.php(781): UserController->renderFile()
+#2 F:\PHPDev\www\Bbs\app\protected\controllers\UserController.php(17): UserController->render()
+#3 F:\PHPDev\www\Bbs\framework\web\actions\CInlineAction.php(50): UserController->actionIndex()
+#4 F:\PHPDev\www\Bbs\framework\web\CController.php(300): CInlineAction->runWithParams()
+#5 F:\PHPDev\www\Bbs\framework\web\CController.php(278): UserController->runAction()
+#6 F:\PHPDev\www\Bbs\framework\web\CController.php(257): UserController->runActionWithFilters()
+#7 F:\PHPDev\www\Bbs\framework\web\CWebApplication.php(328): UserController->run()
+#8 F:\PHPDev\www\Bbs\framework\web\CWebApplication.php(121): CWebApplication->runController()
+#9 F:\PHPDev\www\Bbs\framework\base\CApplication.php(155): CWebApplication->processRequest()
+#10 F:\PHPDev\www\Bbs\app\index.php(13): CWebApplication->run()
+REQUEST_URI=/Bbs/app/index.php?r=user/index
+in F:\PHPDev\www\Bbs\app\protected\views\layouts\bbs.php (1)
+in F:\PHPDev\www\Bbs\app\protected\controllers\UserController.php (17)
+in F:\PHPDev\www\Bbs\app\index.php (13)
+2015/12/31 15:43:55 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in F:\PHPDev\www\Bbs\framework\web\CController.php:328
+Stack trace:
+#0 F:\PHPDev\www\Bbs\framework\web\CController.php(301): CController->invalidActionParams(Object(CInlineAction))
+#1 F:\PHPDev\www\Bbs\framework\web\CController.php(278): CController->runAction(Object(CInlineAction))
+#2 F:\PHPDev\www\Bbs\framework\web\CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 F:\PHPDev\www\Bbs\framework\web\CWebApplication.php(328): CController->run('update')
+#4 F:\PHPDev\www\Bbs\framework\web\CWebApplication.php(121): CWebApplication->runController('user/update')
+#5 F:\PHPDev\www\Bbs\framework\base\CApplication.php(155): CWebApplication->processRequest()
+#6 F:\PHPDev\www\Bbs\app\index.php(13): CApplication->run()
+#7 {main} REQUEST_URI=/Bbs/app/index.php?r=user/update
+2015/12/31 15:45:00 [error] [php] Missing argument 2 for CActiveRecord::updateByPk(), called in F:\PHPDev\www\Bbs\app\protected\controllers\UserController.php on line 21 and defined (F:\PHPDev\www\Bbs\framework\db\ar\CActiveRecord.php:1644)
+Stack trace:
+#0 F:\PHPDev\www\Bbs\framework\web\actions\CAction.php(104): ReflectionMethod->invokeArgs()
+#1 F:\PHPDev\www\Bbs\framework\web\actions\CInlineAction.php(48): CInlineAction->runWithParamsInternal()
+#2 F:\PHPDev\www\Bbs\framework\web\CController.php(300): CInlineAction->runWithParams()
+#3 F:\PHPDev\www\Bbs\framework\web\CController.php(278): UserController->runAction()
+#4 F:\PHPDev\www\Bbs\framework\web\CController.php(257): UserController->runActionWithFilters()
+#5 F:\PHPDev\www\Bbs\framework\web\CWebApplication.php(328): UserController->run()
+#6 F:\PHPDev\www\Bbs\framework\web\CWebApplication.php(121): CWebApplication->runController()
+#7 F:\PHPDev\www\Bbs\framework\base\CApplication.php(155): CWebApplication->processRequest()
+#8 F:\PHPDev\www\Bbs\app\index.php(13): CWebApplication->run()
+REQUEST_URI=/Bbs/app/index.php?r=user/update/userId/1
+in F:\PHPDev\www\Bbs\app\protected\controllers\UserController.php (21)
+in F:\PHPDev\www\Bbs\app\index.php (13)
+2015/12/31 16:03:12 [error] [php] Invalid argument supplied for foreach() (F:\PHPDev\www\Bbs\app\protected\views\topic\index.php:12)
+Stack trace:
+#0 F:\PHPDev\www\Bbs\framework\web\CController.php(866): TopicController->renderFile()
+#1 F:\PHPDev\www\Bbs\framework\web\CController.php(779): TopicController->renderPartial()
+#2 F:\PHPDev\www\Bbs\app\protected\controllers\TopicController.php(15): TopicController->render()
+#3 F:\PHPDev\www\Bbs\framework\web\actions\CInlineAction.php(50): TopicController->actionIndex()
+#4 F:\PHPDev\www\Bbs\framework\web\CController.php(300): CInlineAction->runWithParams()
+#5 F:\PHPDev\www\Bbs\framework\web\CController.php(278): TopicController->runAction()
+#6 F:\PHPDev\www\Bbs\framework\web\CController.php(257): TopicController->runActionWithFilters()
+#7 F:\PHPDev\www\Bbs\framework\web\CWebApplication.php(328): TopicController->run()
+#8 F:\PHPDev\www\Bbs\framework\web\CWebApplication.php(121): CWebApplication->runController()
+#9 F:\PHPDev\www\Bbs\framework\base\CApplication.php(155): CWebApplication->processRequest()
+#10 F:\PHPDev\www\Bbs\app\index.php(13): CWebApplication->run()
+REQUEST_URI=/Bbs/app/index.php?r=topic/index
+in F:\PHPDev\www\Bbs\app\protected\views\topic\index.php (12)
+in F:\PHPDev\www\Bbs\app\protected\controllers\TopicController.php (15)
+in F:\PHPDev\www\Bbs\app\index.php (13)
+2015/12/31 21:25:13 [error] [system.db.CDbCommand] CDbCommand::fetch() failed: SQLSTATE[42000]: Syntax error or access violation: 1065 Query was empty. The SQL statement executed was: .
+in F:\PHPDev\www\Bbs\app\protected\controllers\SearchController.php (23)
+in F:\PHPDev\www\Bbs\app\index.php (13)
+2015/12/31 21:25:13 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1065 Query was empty. The SQL statement executed was: ' in F:\PHPDev\www\Bbs\framework\db\CDbCommand.php:518
+Stack trace:
+#0 F:\PHPDev\www\Bbs\framework\db\CDbCommand.php(395): CDbCommand->queryInternal('fetch', Array, Array)
+#1 F:\PHPDev\www\Bbs\app\protected\controllers\SearchController.php(23): CDbCommand->queryRow()
+#2 F:\PHPDev\www\Bbs\framework\web\actions\CInlineAction.php(50): SearchController->actionSearch()
+#3 F:\PHPDev\www\Bbs\framework\web\CController.php(300): CInlineAction->runWithParams(Array)
+#4 F:\PHPDev\www\Bbs\framework\web\CController.php(278): CController->runAction(Object(CInlineAction))
+#5 F:\PHPDev\www\Bbs\framework\web\CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 F:\PHPDev\www\Bbs\framework\web\CWebApplication.php(328): CController->run('search')
+#7 F:\PHPDev\www\Bbs\framework\web\CWebApplication.php(121): CWebApplication->runController('search/search')
+#8 F:\PHPDev\www\Bbs\framework\base\CApplication.php(155): CWebApplication->processRequest()
+#9 F:\PHPDev\www\Bbs\app\index.php(13): CApplication->run()
+#10 {main} REQUEST_URI=/Bbs/app/index.php?r=search/search
+2015/12/31 21:26:10 [error] [system.db.CDbCommand] CDbCommand::fetch() failed: SQLSTATE[42000]: Syntax error or access violation: 1065 Query was empty. The SQL statement executed was: .
+in F:\PHPDev\www\Bbs\app\protected\controllers\SearchController.php (23)
+in F:\PHPDev\www\Bbs\app\index.php (13)
+2015/12/31 21:26:10 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1065 Query was empty. The SQL statement executed was: ' in F:\PHPDev\www\Bbs\framework\db\CDbCommand.php:518
+Stack trace:
+#0 F:\PHPDev\www\Bbs\framework\db\CDbCommand.php(395): CDbCommand->queryInternal('fetch', Array, Array)
+#1 F:\PHPDev\www\Bbs\app\protected\controllers\SearchController.php(23): CDbCommand->queryRow()
+#2 F:\PHPDev\www\Bbs\framework\web\actions\CInlineAction.php(50): SearchController->actionSearch()
+#3 F:\PHPDev\www\Bbs\framework\web\CController.php(300): CInlineAction->runWithParams(Array)
+#4 F:\PHPDev\www\Bbs\framework\web\CController.php(278): CController->runAction(Object(CInlineAction))
+#5 F:\PHPDev\www\Bbs\framework\web\CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 F:\PHPDev\www\Bbs\framework\web\CWebApplication.php(328): CController->run('search')
+#7 F:\PHPDev\www\Bbs\framework\web\CWebApplication.php(121): CWebApplication->runController('search/search')
+#8 F:\PHPDev\www\Bbs\framework\base\CApplication.php(155): CWebApplication->processRequest()
+#9 F:\PHPDev\www\Bbs\app\index.php(13): CApplication->run()
+#10 {main} REQUEST_URI=/Bbs/app/index.php?r=search/search
+2015/12/31 21:33:03 [error] [system.db.CDbCommand] CDbCommand::fetch() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'LIKE '%%'' at line 1. The SQL statement executed was: SELECT * FROM bbsinfo AS a,bbsType AS b,userInfo AS c WHERE a.typeId=b.typeId AND a.userId=c.userId AND  LIKE '%%'.
+in F:\PHPDev\www\Bbs\app\protected\controllers\SearchController.php (23)
+in F:\PHPDev\www\Bbs\app\index.php (13)
+2015/12/31 21:33:03 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'LIKE '%%'' at line 1. The SQL statement executed was: SELECT * FROM bbsinfo AS a,bbsType AS b,userInfo AS c WHERE a.typeId=b.typeId AND a.userId=c.userId AND  LIKE '%%'' in F:\PHPDev\www\Bbs\framework\db\CDbCommand.php:518
+Stack trace:
+#0 F:\PHPDev\www\Bbs\framework\db\CDbCommand.php(395): CDbCommand->queryInternal('fetch', Array, Array)
+#1 F:\PHPDev\www\Bbs\app\protected\controllers\SearchController.php(23): CDbCommand->queryRow()
+#2 F:\PHPDev\www\Bbs\framework\web\actions\CInlineAction.php(50): SearchController->actionSearch()
+#3 F:\PHPDev\www\Bbs\framework\web\CController.php(300): CInlineAction->runWithParams(Array)
+#4 F:\PHPDev\www\Bbs\framework\web\CController.php(278): CController->runAction(Object(CInlineAction))
+#5 F:\PHPDev\www\Bbs\framework\web\CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 F:\PHPDev\www\Bbs\framework\web\CWebApplication.php(328): CController->run('search')
+#7 F:\PHPDev\www\Bbs\framework\web\CWebApplication.php(121): CWebApplication->runController('search/search')
+#8 F:\PHPDev\www\Bbs\framework\base\CApplication.php(155): CWebApplication->processRequest()
+#9 F:\PHPDev\www\Bbs\app\index.php(13): CApplication->run()
+#10 {main} REQUEST_URI=/Bbs/app/index.php?r=search/search
+2015/12/31 21:35:03 [error] [system.db.CDbCommand] CDbCommand::fetch() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'LIKE '%%'' at line 1. The SQL statement executed was: SELECT * FROM bbsinfo AS a,bbsType AS b,userInfo AS c WHERE a.typeId=b.typeId AND a.userId=c.userId AND  LIKE '%%'.
+in F:\PHPDev\www\Bbs\app\protected\controllers\SearchController.php (23)
+in F:\PHPDev\www\Bbs\app\index.php (13)
+2015/12/31 21:35:03 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'LIKE '%%'' at line 1. The SQL statement executed was: SELECT * FROM bbsinfo AS a,bbsType AS b,userInfo AS c WHERE a.typeId=b.typeId AND a.userId=c.userId AND  LIKE '%%'' in F:\PHPDev\www\Bbs\framework\db\CDbCommand.php:518
+Stack trace:
+#0 F:\PHPDev\www\Bbs\framework\db\CDbCommand.php(395): CDbCommand->queryInternal('fetch', Array, Array)
+#1 F:\PHPDev\www\Bbs\app\protected\controllers\SearchController.php(23): CDbCommand->queryRow()
+#2 F:\PHPDev\www\Bbs\framework\web\actions\CInlineAction.php(50): SearchController->actionSearch()
+#3 F:\PHPDev\www\Bbs\framework\web\CController.php(300): CInlineAction->runWithParams(Array)
+#4 F:\PHPDev\www\Bbs\framework\web\CController.php(278): CController->runAction(Object(CInlineAction))
+#5 F:\PHPDev\www\Bbs\framework\web\CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 F:\PHPDev\www\Bbs\framework\web\CWebApplication.php(328): CController->run('search')
+#7 F:\PHPDev\www\Bbs\framework\web\CWebApplication.php(121): CWebApplication->runController('search/search')
+#8 F:\PHPDev\www\Bbs\framework\base\CApplication.php(155): CWebApplication->processRequest()
+#9 F:\PHPDev\www\Bbs\app\index.php(13): CApplication->run()
+#10 {main} REQUEST_URI=/Bbs/app/index.php?r=search/search
+2015/12/31 21:35:04 [error] [system.db.CDbCommand] CDbCommand::fetch() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'LIKE '%%'' at line 1. The SQL statement executed was: SELECT * FROM bbsinfo AS a,bbsType AS b,userInfo AS c WHERE a.typeId=b.typeId AND a.userId=c.userId AND  LIKE '%%'.
+in F:\PHPDev\www\Bbs\app\protected\controllers\SearchController.php (23)
+in F:\PHPDev\www\Bbs\app\index.php (13)
+2015/12/31 21:35:04 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'LIKE '%%'' at line 1. The SQL statement executed was: SELECT * FROM bbsinfo AS a,bbsType AS b,userInfo AS c WHERE a.typeId=b.typeId AND a.userId=c.userId AND  LIKE '%%'' in F:\PHPDev\www\Bbs\framework\db\CDbCommand.php:518
+Stack trace:
+#0 F:\PHPDev\www\Bbs\framework\db\CDbCommand.php(395): CDbCommand->queryInternal('fetch', Array, Array)
+#1 F:\PHPDev\www\Bbs\app\protected\controllers\SearchController.php(23): CDbCommand->queryRow()
+#2 F:\PHPDev\www\Bbs\framework\web\actions\CInlineAction.php(50): SearchController->actionSearch()
+#3 F:\PHPDev\www\Bbs\framework\web\CController.php(300): CInlineAction->runWithParams(Array)
+#4 F:\PHPDev\www\Bbs\framework\web\CController.php(278): CController->runAction(Object(CInlineAction))
+#5 F:\PHPDev\www\Bbs\framework\web\CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 F:\PHPDev\www\Bbs\framework\web\CWebApplication.php(328): CController->run('search')
+#7 F:\PHPDev\www\Bbs\framework\web\CWebApplication.php(121): CWebApplication->runController('search/search')
+#8 F:\PHPDev\www\Bbs\framework\base\CApplication.php(155): CWebApplication->processRequest()
+#9 F:\PHPDev\www\Bbs\app\index.php(13): CApplication->run()
+#10 {main} REQUEST_URI=/Bbs/app/index.php?r=search/search
+2015/12/31 21:35:05 [error] [system.db.CDbCommand] CDbCommand::fetch() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'LIKE '%%'' at line 1. The SQL statement executed was: SELECT * FROM bbsinfo AS a,bbsType AS b,userInfo AS c WHERE a.typeId=b.typeId AND a.userId=c.userId AND  LIKE '%%'.
+in F:\PHPDev\www\Bbs\app\protected\controllers\SearchController.php (23)
+in F:\PHPDev\www\Bbs\app\index.php (13)
+2015/12/31 21:35:05 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'LIKE '%%'' at line 1. The SQL statement executed was: SELECT * FROM bbsinfo AS a,bbsType AS b,userInfo AS c WHERE a.typeId=b.typeId AND a.userId=c.userId AND  LIKE '%%'' in F:\PHPDev\www\Bbs\framework\db\CDbCommand.php:518
+Stack trace:
+#0 F:\PHPDev\www\Bbs\framework\db\CDbCommand.php(395): CDbCommand->queryInternal('fetch', Array, Array)
+#1 F:\PHPDev\www\Bbs\app\protected\controllers\SearchController.php(23): CDbCommand->queryRow()
+#2 F:\PHPDev\www\Bbs\framework\web\actions\CInlineAction.php(50): SearchController->actionSearch()
+#3 F:\PHPDev\www\Bbs\framework\web\CController.php(300): CInlineAction->runWithParams(Array)
+#4 F:\PHPDev\www\Bbs\framework\web\CController.php(278): CController->runAction(Object(CInlineAction))
+#5 F:\PHPDev\www\Bbs\framework\web\CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 F:\PHPDev\www\Bbs\framework\web\CWebApplication.php(328): CController->run('search')
+#7 F:\PHPDev\www\Bbs\framework\web\CWebApplication.php(121): CWebApplication->runController('search/search')
+#8 F:\PHPDev\www\Bbs\framework\base\CApplication.php(155): CWebApplication->processRequest()
+#9 F:\PHPDev\www\Bbs\app\index.php(13): CApplication->run()
+#10 {main} REQUEST_URI=/Bbs/app/index.php?r=search/search
+2015/12/31 21:35:05 [error] [system.db.CDbCommand] CDbCommand::fetch() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'LIKE '%%'' at line 1. The SQL statement executed was: SELECT * FROM bbsinfo AS a,bbsType AS b,userInfo AS c WHERE a.typeId=b.typeId AND a.userId=c.userId AND  LIKE '%%'.
+in F:\PHPDev\www\Bbs\app\protected\controllers\SearchController.php (23)
+in F:\PHPDev\www\Bbs\app\index.php (13)
+2015/12/31 21:35:05 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'LIKE '%%'' at line 1. The SQL statement executed was: SELECT * FROM bbsinfo AS a,bbsType AS b,userInfo AS c WHERE a.typeId=b.typeId AND a.userId=c.userId AND  LIKE '%%'' in F:\PHPDev\www\Bbs\framework\db\CDbCommand.php:518
+Stack trace:
+#0 F:\PHPDev\www\Bbs\framework\db\CDbCommand.php(395): CDbCommand->queryInternal('fetch', Array, Array)
+#1 F:\PHPDev\www\Bbs\app\protected\controllers\SearchController.php(23): CDbCommand->queryRow()
+#2 F:\PHPDev\www\Bbs\framework\web\actions\CInlineAction.php(50): SearchController->actionSearch()
+#3 F:\PHPDev\www\Bbs\framework\web\CController.php(300): CInlineAction->runWithParams(Array)
+#4 F:\PHPDev\www\Bbs\framework\web\CController.php(278): CController->runAction(Object(CInlineAction))
+#5 F:\PHPDev\www\Bbs\framework\web\CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 F:\PHPDev\www\Bbs\framework\web\CWebApplication.php(328): CController->run('search')
+#7 F:\PHPDev\www\Bbs\framework\web\CWebApplication.php(121): CWebApplication->runController('search/search')
+#8 F:\PHPDev\www\Bbs\framework\base\CApplication.php(155): CWebApplication->processRequest()
+#9 F:\PHPDev\www\Bbs\app\index.php(13): CApplication->run()
+#10 {main} REQUEST_URI=/Bbs/app/index.php?r=search/search
+2015/12/31 21:38:02 [error] [system.db.CDbCommand] CDbCommand::fetch() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'yiibbs.userindo' doesn't exist. The SQL statement executed was: SELECT * FROM userIndo AS a,bbsInfo AS b WHERE bbsId='6' AND a.userId=b.userId.
+in F:\PHPDev\www\Bbs\app\protected\controllers\ViewController.php (17)
+in F:\PHPDev\www\Bbs\app\index.php (13)
+2015/12/31 21:38:02 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'yiibbs.userindo' doesn't exist. The SQL statement executed was: SELECT * FROM userIndo AS a,bbsInfo AS b WHERE bbsId='6' AND a.userId=b.userId' in F:\PHPDev\www\Bbs\framework\db\CDbCommand.php:518
+Stack trace:
+#0 F:\PHPDev\www\Bbs\framework\db\CDbCommand.php(395): CDbCommand->queryInternal('fetch', Array, Array)
+#1 F:\PHPDev\www\Bbs\app\protected\controllers\ViewController.php(17): CDbCommand->queryRow()
+#2 [internal function]: ViewController->actionIndex('6')
+#3 F:\PHPDev\www\Bbs\framework\web\actions\CAction.php(104): ReflectionMethod->invokeArgs(Object(ViewController), Array)
+#4 F:\PHPDev\www\Bbs\framework\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(ViewController), Object(ReflectionMethod), Array)
+#5 F:\PHPDev\www\Bbs\framework\web\CController.php(300): CInlineAction->runWithParams(Array)
+#6 F:\PHPDev\www\Bbs\framework\web\CController.php(278): CController->runAction(Object(CInlineAction))
+#7 F:\PHPDev\www\Bbs\framework\web\CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 F:\PHPDev\www\Bbs\framework\web\CWebApplication.php(328): CController->run('index')
+#9 F:\PHPDev\www\Bbs\framework\web\CWebApplication.php(121): CWebApplication->runController('view/index/bbsI...')
+#10 F:\PHPDev\www\Bbs\framework\base\CApplication.php(155): CWebApplication->processRequest()
+#11 F:\PHPDev\www\Bbs\app\index.php(13): CApplication->run()
+#12 {main} REQUEST_URI=/Bbs/app/index.php?r=view/index/bbsId/6
+2015/12/31 23:49:33 [error] [php] Invalid argument supplied for foreach() (F:\PHPDev\www\Bbs\app\protected\views\view\edit.php:29)
+Stack trace:
+#0 F:\PHPDev\www\Bbs\framework\web\CController.php(866): ViewController->renderFile()
+#1 F:\PHPDev\www\Bbs\framework\web\CController.php(779): ViewController->renderPartial()
+#2 F:\PHPDev\www\Bbs\app\protected\controllers\ViewController.php(25): ViewController->render()
+#3 F:\PHPDev\www\Bbs\framework\web\actions\CInlineAction.php(50): ViewController->actionEdit()
+#4 F:\PHPDev\www\Bbs\framework\web\CController.php(300): CInlineAction->runWithParams()
+#5 F:\PHPDev\www\Bbs\framework\web\CController.php(278): ViewController->runAction()
+#6 F:\PHPDev\www\Bbs\framework\web\CController.php(257): ViewController->runActionWithFilters()
+#7 F:\PHPDev\www\Bbs\framework\web\CWebApplication.php(328): ViewController->run()
+#8 F:\PHPDev\www\Bbs\framework\web\CWebApplication.php(121): CWebApplication->runController()
+#9 F:\PHPDev\www\Bbs\framework\base\CApplication.php(155): CWebApplication->processRequest()
+#10 F:\PHPDev\www\Bbs\app\index.php(13): CWebApplication->run()
+REQUEST_URI=/Bbs/app/index.php?r=view/edit/bbsId/7
+in F:\PHPDev\www\Bbs\app\protected\views\view\edit.php (29)
+in F:\PHPDev\www\Bbs\app\protected\controllers\ViewController.php (25)
+in F:\PHPDev\www\Bbs\app\index.php (13)
+2016/01/01 16:54:15 [error] [system.db.CDbCommand] CDbCommand::fetch() failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'admin' in 'where clause'. The SQL statement executed was: SELECT * FROM `userinfo` `t` WHERE 'userName'=admin LIMIT 1.
+in F:\PHPDev\www\Bbs\app\protected\controllers\UserController.php (16)
+in F:\PHPDev\www\Bbs\app\index.php (13)
+2016/01/01 16:54:15 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'admin' in 'where clause'. The SQL statement executed was: SELECT * FROM `userinfo` `t` WHERE 'userName'=admin LIMIT 1' in F:\PHPDev\www\Bbs\framework\db\CDbCommand.php:518
+Stack trace:
+#0 F:\PHPDev\www\Bbs\framework\db\CDbCommand.php(395): CDbCommand->queryInternal('fetch', Array, Array)
+#1 F:\PHPDev\www\Bbs\framework\db\ar\CActiveRecord.php(1256): CDbCommand->queryRow()
+#2 F:\PHPDev\www\Bbs\framework\db\ar\CActiveRecord.php(1366): CActiveRecord->query(Object(CDbCriteria))
+#3 F:\PHPDev\www\Bbs\app\protected\controllers\UserController.php(16): CActiveRecord->find(''userName'=admi...')
+#4 F:\PHPDev\www\Bbs\framework\web\actions\CInlineAction.php(50): UserController->actionIndex()
+#5 F:\PHPDev\www\Bbs\framework\web\CController.php(300): CInlineAction->runWithParams(Array)
+#6 F:\PHPDev\www\Bbs\framework\web\CController.php(278): CController->runAction(Object(CInlineAction))
+#7 F:\PHPDev\www\Bbs\framework\web\CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 F:\PHPDev\www\Bbs\framework\web\CWebApplication.php(328): CController->run('index')
+#9 F:\PHPDev\www\Bbs\framework\web\CWebApplication.php(121): CWebApplication->runController('user/index')
+#10 F:\PHPDev\www\Bbs\framework\base\CApplication.php(155): CWebApplication->processRequest()
+#11 F:\PHPDev\www\Bbs\app\index.php(13): CApplication->run()
+#12 {main} REQUEST_URI=/Bbs/app/index.php?r=user/index
+2016/01/01 19:55:31 [error] [exception.CException] exception 'CException' with message 'CDbConnection does not have a method named "createCommant".' in F:\PHPDev\www\Bbs\framework\base\CComponent.php:266
+Stack trace:
+#0 F:\PHPDev\www\Bbs\app\protected\controllers\ViewController.php(20): CComponent->__call('createCommant', Array)
+#1 F:\PHPDev\www\Bbs\app\protected\controllers\ViewController.php(20): CDbConnection->createCommant('SELECT * FROM u...')
+#2 [internal function]: ViewController->actionIndex('')
+#3 F:\PHPDev\www\Bbs\framework\web\actions\CAction.php(104): ReflectionMethod->invokeArgs(Object(ViewController), Array)
+#4 F:\PHPDev\www\Bbs\framework\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(ViewController), Object(ReflectionMethod), Array)
+#5 F:\PHPDev\www\Bbs\framework\web\CController.php(300): CInlineAction->runWithParams(Array)
+#6 F:\PHPDev\www\Bbs\framework\web\CController.php(278): CController->runAction(Object(CInlineAction))
+#7 F:\PHPDev\www\Bbs\framework\web\CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 F:\PHPDev\www\Bbs\framework\web\CWebApplication.php(328): CController->run('index')
+#9 F:\PHPDev\www\Bbs\framework\web\CWebApplication.php(121): CWebApplication->runController('view/index/bbsI...')
+#10 F:\PHPDev\www\Bbs\framework\base\CApplication.php(155): CWebApplication->processRequest()
+#11 F:\PHPDev\www\Bbs\app\index.php(13): CApplication->run()
+#12 {main} REQUEST_URI=/Bbs/app/index.php?r=view/index/bbsId/
+2016/01/01 20:00:11 [error] [system.db.CDbCommand] CDbCommand::fetch() failed: SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'bbsId' in where clause is ambiguous. The SQL statement executed was: SELECT * FROM userInfo AS a,reviews AS b ,bbsInfo AS c WHERE bbsId='6' AND a.userId=b.userId AND b.bbsId=c.bbsId.
+in F:\PHPDev\www\Bbs\app\protected\controllers\ViewController.php (22)
+in F:\PHPDev\www\Bbs\app\index.php (13)
+2016/01/01 20:00:11 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'bbsId' in where clause is ambiguous. The SQL statement executed was: SELECT * FROM userInfo AS a,reviews AS b ,bbsInfo AS c WHERE bbsId='6' AND a.userId=b.userId AND b.bbsId=c.bbsId' in F:\PHPDev\www\Bbs\framework\db\CDbCommand.php:518
+Stack trace:
+#0 F:\PHPDev\www\Bbs\framework\db\CDbCommand.php(395): CDbCommand->queryInternal('fetch', Array, Array)
+#1 F:\PHPDev\www\Bbs\app\protected\controllers\ViewController.php(22): CDbCommand->queryRow()
+#2 [internal function]: ViewController->actionIndex('6')
+#3 F:\PHPDev\www\Bbs\framework\web\actions\CAction.php(104): ReflectionMethod->invokeArgs(Object(ViewController), Array)
+#4 F:\PHPDev\www\Bbs\framework\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(ViewController), Object(ReflectionMethod), Array)
+#5 F:\PHPDev\www\Bbs\framework\web\CController.php(300): CInlineAction->runWithParams(Array)
+#6 F:\PHPDev\www\Bbs\framework\web\CController.php(278): CController->runAction(Object(CInlineAction))
+#7 F:\PHPDev\www\Bbs\framework\web\CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 F:\PHPDev\www\Bbs\framework\web\CWebApplication.php(328): CController->run('index')
+#9 F:\PHPDev\www\Bbs\framework\web\CWebApplication.php(121): CWebApplication->runController('view/index/bbsI...')
+#10 F:\PHPDev\www\Bbs\framework\base\CApplication.php(155): CWebApplication->processRequest()
+#11 F:\PHPDev\www\Bbs\app\index.php(13): CApplication->run()
+#12 {main} REQUEST_URI=/Bbs/app/index.php?r=view/index/bbsId/6
+2016/01/01 20:17:44 [error] [exception.CDbException] exception 'CDbException' with message 'The active record cannot be deleted because it is new.' in F:\PHPDev\www\Bbs\framework\db\ar\CActiveRecord.php:1136
+Stack trace:
+#0 F:\PHPDev\www\Bbs\app\protected\controllers\ViewController.php(57): CActiveRecord->delete(''reId'=')
+#1 [internal function]: ViewController->actiondelReview('', '6')
+#2 F:\PHPDev\www\Bbs\framework\web\actions\CAction.php(104): ReflectionMethod->invokeArgs(Object(ViewController), Array)
+#3 F:\PHPDev\www\Bbs\framework\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(ViewController), Object(ReflectionMethod), Array)
+#4 F:\PHPDev\www\Bbs\framework\web\CController.php(300): CInlineAction->runWithParams(Array)
+#5 F:\PHPDev\www\Bbs\framework\web\CController.php(278): CController->runAction(Object(CInlineAction))
+#6 F:\PHPDev\www\Bbs\framework\web\CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 F:\PHPDev\www\Bbs\framework\web\CWebApplication.php(328): CController->run('delReview')
+#8 F:\PHPDev\www\Bbs\framework\web\CWebApplication.php(121): CWebApplication->runController('view/delReview/...')
+#9 F:\PHPDev\www\Bbs\framework\base\CApplication.php(155): CWebApplication->processRequest()
+#10 F:\PHPDev\www\Bbs\app\index.php(13): CApplication->run()
+#11 {main} REQUEST_URI=/Bbs/app/index.php?r=view/delReview/reId//bbsId/6
+2016/01/01 20:19:42 [error] [exception.CDbException] exception 'CDbException' with message 'The active record cannot be deleted because it is new.' in F:\PHPDev\www\Bbs\framework\db\ar\CActiveRecord.php:1136
+Stack trace:
+#0 F:\PHPDev\www\Bbs\app\protected\controllers\ViewController.php(57): CActiveRecord->delete(''reId'=1')
+#1 [internal function]: ViewController->actiondelReview('1', '6')
+#2 F:\PHPDev\www\Bbs\framework\web\actions\CAction.php(104): ReflectionMethod->invokeArgs(Object(ViewController), Array)
+#3 F:\PHPDev\www\Bbs\framework\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(ViewController), Object(ReflectionMethod), Array)
+#4 F:\PHPDev\www\Bbs\framework\web\CController.php(300): CInlineAction->runWithParams(Array)
+#5 F:\PHPDev\www\Bbs\framework\web\CController.php(278): CController->runAction(Object(CInlineAction))
+#6 F:\PHPDev\www\Bbs\framework\web\CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 F:\PHPDev\www\Bbs\framework\web\CWebApplication.php(328): CController->run('delReview')
+#8 F:\PHPDev\www\Bbs\framework\web\CWebApplication.php(121): CWebApplication->runController('view/delReview/...')
+#9 F:\PHPDev\www\Bbs\framework\base\CApplication.php(155): CWebApplication->processRequest()
+#10 F:\PHPDev\www\Bbs\app\index.php(13): CApplication->run()
+#11 {main} REQUEST_URI=/Bbs/app/index.php?r=view/delReview/reId/1/bbsId/6
