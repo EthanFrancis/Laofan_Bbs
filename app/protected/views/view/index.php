@@ -7,7 +7,7 @@
     };
   }
   function delReview (reId) {
-    if (confirm("确认删除话题?")) {
+    if (confirm("确认删除评论?")) {
       window.location.href="index.php?r=view/delReview/reId/"+reId+"/bbsId/<?php echo $viewInfo['bbsId'] ?>";
     };
   }
